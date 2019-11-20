@@ -1,0 +1,63 @@
+@import '../../global/abstracts/variables';
+@import '../../global/base/typography';
+@import '../../global/components/buttons';
+
+.container {
+    background: url('../../assets/header-login.png') center 0 no-repeat $text-color;
+    background-size: 100% 93%;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+
+    &__login {
+        margin: 30px auto;
+        width: 50%;
+        text-align: center;
+    }
+}
+.login__logo {
+    width: 6%;
+} 
+.logo {
+    width: 10%;
+    margin-left: 150px;
+}
+.secondary__style {
+    color: $text-color;
+}
+.form__control {
+    margin-bottom: 37px;
+
+    &-input {
+        padding: 20px;
+        width: 35%;
+        outline: none;
+        border: none;
+        background-color: $input-backgroundColor;
+        border-radius: 12px;
+        color: $text-color;
+        &::placeholder {
+            color: $text-color;
+            font-size: 15.8px;
+            font-family: 700;
+            font-family: 'poppins' sans-serif;
+        }
+    }
+}
+.remember__link {
+    text-decoration: none;
+    font-size: 15px;
+    color: $button-color;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.login__footer{
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 300px;
+    font-weight: 600;
+}

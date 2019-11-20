@@ -1,0 +1,24 @@
+@import '../abstracts/variables';
+
+.btn {
+    color: $text-color;
+    outline: none;
+    border: none;
+    background-color: $button-color;
+    display: block;
+    border-radius: 17px;
+    font-weight: 700;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: all .6s ease;
+    &:hover {
+        background-color: $text-color;
+        color: $button-color;
+    }
+}
+
+.btn-lg {
+    padding: 10px 150px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
