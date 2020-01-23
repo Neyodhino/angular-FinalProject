@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RevenueRoutingModule } from './revenue-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [ RevenueRoutingModule.components ],
   imports: [
-    CommonModule,
-    RevenueRoutingModule
+    RevenueRoutingModule,
+    SharedModule
   ]
 })
 export class RevenueModule { }

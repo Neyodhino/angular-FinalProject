@@ -1,0 +1,36 @@
+<div class="sidebar">
+    <div class="sidebar__content">
+        <h2 class="sidebar__heading">
+          <span><fa-icon [icon]="dashboardIcon" class="dashboardIcon"></fa-icon></span>
+          <span>Dashboard</span>
+        </h2>
+          <nav>
+              <ul>
+                <li>
+                  <fa-icon [icon]="chartIcon" style="color: #17148f"></fa-icon>
+                  <a routerLink = "/admin/dashboard" routerLinkActive = "active">Dashboard</a>
+                </li>
+  
+                <li>
+                    <fa-icon [icon]="transactionIcon" style="color: #dbc92a"></fa-icon>
+                    <a routerLink = "/admin/transaction" routerLinkActive = "active">Transaction</a>
+                  </li>
+  
+                  <li>
+                    <fa-icon [icon]="addIcon" style="color: #CC3299"></fa-icon>
+                    <a routerLink="/admin/create-reseller" routerLinkActive = "active">Create Reseller</a>
+                  </li>
+  
+                  <li>
+                    <fa-icon [icon]="topupIcon" style="color: #551A8B"></fa-icon>
+                    <a routerLink = "/admin/topup" routerLinkActive = "active">Topup</a>
+                  </li>
+  
+                  <li>
+                    <fa-icon [icon]="reportIcon" style="color: #FF3030"></fa-icon>
+                    <a routerLink = "/admin/report" routerLinkActive = "active">Transaction Report</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+</div>
