@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RevenueComponent } from './revenue.component';
-import { DashboardComponent } from "./dashboard/dashboard.component";
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
     { path: '', component: RevenueComponent }
 ]
 
 @NgModule({
-    imports: [ 
+    imports: [
         CommonModule,
         RouterModule.forChild(routes)
      ],

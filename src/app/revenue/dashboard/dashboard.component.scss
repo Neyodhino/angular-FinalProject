@@ -1,0 +1,74 @@
+@import "../../../global/abstracts/variables";
+@import "../../../global/base/typography";
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+  padding-top: 50px;
+}
+.header {
+    border: 1px solid $lightGray;
+    padding: 15px;
+    box-shadow: 3px 0 7px -4px #ccc;
+
+    &__title {
+        font-size: 15px;
+        font-family: inherit;
+        font-weight: bold;
+        color: $darkGray;
+    }
+}
+
+.banner {
+  width: 80%;
+  height: 250px;
+  background: url("../../../assets/revenue.png");
+  background-size: cover;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+  &__title {
+    padding-top: 90px;
+    padding-left: 50px;
+    color: #fff;
+  }
+}
+.main {
+  display: flex;
+  width: 80%;
+  margin: 60px auto;
+}
+.operations {
+  padding: 10px;
+  border: 1px solid #ccc;
+  height: 180px;
+  background-color: #fff;
+  margin-right: 50px;
+}
+.operation__title {
+  display: flex;
+}
+.operation__icon {
+  font-size: 3.7rem;
+}
+.operation__link {
+  display: block;
+  color: white;
+  background-color: #270A33;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 27px;
+  margin-left: 165px;
+  width: 100px;
+}
+.divider {
+  color: #ccc;
+  margin-top: 12px;
+  margin-left: -10px;
+  width: 107%;
+}

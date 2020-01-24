@@ -13,6 +13,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CommonModule,
     FontAwesomeModule
   ],
-  exports: [SidebarComponent]
+  exports: [SidebarComponent, FontAwesomeModule]
 })
 export class SharedModule { }
