@@ -1,5 +1,6 @@
 @import "../../../global/abstracts/variables";
 @import "../../../global/base/typography";
+@import "../../../global/components/header";
 
 .content {
   width: 100%;
@@ -7,19 +8,6 @@
   background-color: #f6f6f6;
   padding-top: 50px;
 }
-.header {
-    border: 1px solid $lightGray;
-    padding: 15px;
-    box-shadow: 3px 0 7px -4px #ccc;
-
-    &__title {
-        font-size: 15px;
-        font-family: inherit;
-        font-weight: bold;
-        color: $darkGray;
-    }
-}
-
 .banner {
   width: 80%;
   height: 250px;
@@ -37,13 +25,14 @@
 }
 .main {
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 60px auto;
 }
 .operations {
   padding: 10px;
   border: 1px solid #ccc;
-  height: 180px;
+  // height: 180px;
   background-color: #fff;
   margin-right: 50px;
 }

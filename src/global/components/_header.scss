@@ -1,0 +1,13 @@
+@import '../abstracts/variables';
+.header {
+  border: 1px solid $lightGray;
+  padding: 15px;
+  box-shadow: 3px 0 7px -4px #ccc;
+
+  &__title {
+      font-size: 15px;
+      font-family: inherit;
+      font-weight: bold;
+      color: $darkGray;
+  }
+}
