@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -15,11 +16,21 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     MatInputModule,
     MatSelectModule,
     MatButtonModule
   ],
-  exports: [SidebarComponent, FontAwesomeModule, MatInputModule, MatSelectModule, MatButtonModule, MatDialogModule]
+  exports: [SidebarComponent,
+     FontAwesomeModule,
+     MatInputModule,
+     MatSelectModule,
+     MatButtonModule,
+     MatDialogModule,
+     FormsModule,
+     ReactiveFormsModule
+    ]
 })
 export class SharedModule { }

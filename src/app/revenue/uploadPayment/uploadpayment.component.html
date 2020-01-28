@@ -8,18 +8,18 @@
     <p>Fill in the payment form</p>
   </div>
   <div class="content__main">
-    <form class="example-form">
+    <form class="example-form" [formGroup]="uploadPaymentForm"  (ngSubmit)="uploadPayment(uploadPaymentForm.value)" >
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Payee Full Name">
+        <input matInput placeholder="Payee Full Name" formControlName="payeeName">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Payee Address">
+        <input matInput placeholder="Payee Address" formControlName="payeeAddress">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
           <mat-label>Select Market</mat-label>
-          <mat-select>
+          <mat-select formControlName="market">
             <mat-option value="ajifowobaje">Ajifowobaje</mat-option>
             <mat-option value="ondoroad">Ondo Road</mat-option>
             <mat-option value="iloro">Iloro</mat-option>
@@ -27,7 +27,7 @@
         </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Amount paid" type="number">
+        <input matInput placeholder="Amount paid" type="number" formControlName="amount">
       </mat-form-field>
       <button mat-raised-button color="accent">Submit</button>
   </form>

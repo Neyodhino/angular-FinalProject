@@ -4,7 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { VaidataDialogComponent } from './vaidata-dialog/vaidata-dialog.component';
 
 @NgModule({
-  declarations: [ RevenueRoutingModule.components, VaidataDialogComponent ],
+  declarations: [ RevenueRoutingModule.components, VaidataDialogComponent],
   imports: [
     RevenueRoutingModule,
     SharedModule
