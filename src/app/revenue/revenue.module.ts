@@ -8,6 +8,8 @@ import { VaidataDialogComponent } from './vaidata-dialog/vaidata-dialog.componen
   imports: [
     RevenueRoutingModule,
     SharedModule
-  ]
+  ],
+  entryComponents: [VaidataDialogComponent],
 })
 export class RevenueModule { }
+

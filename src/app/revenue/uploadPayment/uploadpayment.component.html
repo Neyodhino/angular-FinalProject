@@ -3,9 +3,9 @@
     <p class="header__title">Upload Payment</p>
 </div>
 
-<div class="content">
+<div class="content" id="content">
   <div class="content__header">
-    <p>Fill in the payment form</p>
+    <p style="color: red;"> Fill in the payment form</p>
   </div>
   <div class="content__main">
     <form class="example-form" [formGroup]="uploadPaymentForm"  (ngSubmit)="uploadPayment(uploadPaymentForm.value)" >
@@ -34,3 +34,4 @@
   </div>
 </div>
 </div>
+

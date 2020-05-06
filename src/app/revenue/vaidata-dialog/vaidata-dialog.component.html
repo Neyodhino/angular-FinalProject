@@ -1,10 +1,10 @@
 <h1 mat-dialog-title>Ticket Validation</h1>
 <div mat-dialog-content>
-  <mat-form-field class="input">
-    <input matInput class="input__text" placeholder="Input the ticket id">
-  </mat-form-field>
+    <mat-form-field class="input">
+        <input matInput class="input__text" placeholder="Input the ticket id" [(ngModel)]="data.ticketId">
+    </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button cdkFocusInitial>Validate</button>
+  <button mat-button cdkFocusInitial [mat-dialog-close]="data.ticketId">Validate</button>
 </div>
 

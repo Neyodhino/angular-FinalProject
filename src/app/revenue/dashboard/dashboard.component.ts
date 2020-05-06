@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {faArrowCircleUp, faCheckCircle} from '@fortawesome/free-solid-svg-icons';
-import { VaidataDialogComponent } from "../vaidata-dialog/vaidata-dialog.component";
+import { VaidataDialogComponent } from '../vaidata-dialog/vaidata-dialog.component';
+
+import { DataService } from "../../core/services/data.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
     selector: "revenue-dashboard",
@@ -15,9 +18,9 @@ export class DashboardComponent implements OnInit {
     validateIcon = faCheckCircle;
 
     ticketId: string;
-    constructor( private dialog: MatDialog ) { }
-
-    ngOnInit(): void { }
+    constructor( private dialog: MatDialog, private dataService: DataService, private notification: ToastrService) { }
+    ngOnInit(): void {
+    }
 
     openDialog() {
       const dialogRef = this.dialog.open(VaidataDialogComponent , {
@@ -26,9 +29,16 @@ export class DashboardComponent implements OnInit {
       });
 
       dialogRef.afterClosed().subscribe(result => {
-        console.log('The dialog was closed');
+        this.ticketId = result;
+        console.log(this.ticketId);
+        this.dataService.getPayment(this.ticketId).subscribe(doc=> {
+            if(doc.exists){
+              this.notification.success('Ticket is valid', 'Notification');
+            }else {
+              this.notification.error('Ticket not valid');
+            }
+        })
       });
     }
   }
-
 

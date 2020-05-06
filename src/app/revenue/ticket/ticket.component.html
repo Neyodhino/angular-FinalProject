@@ -1,0 +1,25 @@
+<div class="upload">
+    <div class="header">
+    <p class="header__title">Download Ticket</p>
+</div>
+<button mat-raised-button color="accent" (click)="captureScreen()">Download</button>
+<div class="content" id="content">
+    <div class="heading">
+        <img src="../../../assets/lga_logo.png" alt="logo" class="logo">
+        <div class="heading__content">
+            <h3 class="heading__primary" style="margin-left: 30px">IFE EAST LOCAL GOVERMENT</h3>
+            <h5 class="heading__secondary" style="margin-left: 150px;">MARKET SQUATTERS TICKET</h5>
+        </div>
+    </div>
+    <div class="main">
+        <div class="first__row">
+            <p style="font-size: 2rem;">Ticket Number : </p> <h5 style="font-size: 2rem;">AKL93839002HG</h5>
+            <p style="font-size: 2rem; margin-left: 150px;">Market : </p> <h5 style="font-size: 2rem;">{{market}}</h5> 
+        </div>
+        <div class="second__row">
+            <p style="font-size: 2rem;">Name : </p> <h5 style="font-size: 2rem;">{{payeeName}}</h5>
+            <p style="font-size: 2rem; margin-left: 210px;">Amount : </p> <h5 style="font-size: 2rem;">{{amount}}</h5> 
+         </div>
+    </div>
+    <p style="font-size: 2rem; margin-top: 50px;"> <span style="color: red;">*</span> All market squatters are advise to adhere to all market rules, any market road or equipment damaged by any market squattes shall bear the loss</p>
+</div>

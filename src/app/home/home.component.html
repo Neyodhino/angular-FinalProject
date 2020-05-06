@@ -7,12 +7,12 @@
         <img src="../../assets/login-logo-square.png" alt="login logo" class="login__logo">
         <h5 class="heading__secondary secondary__style">Sign in</h5>
         <p class="paragraph secondary__style">Sign in to monitor revenue records</p>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit) = 'onSubmit(loginForm.value)'>
             <div class="form__control">
-                <input type="text" name="username" placeholder="Username" class="form__control-input">
+                <input type="email" placeholder="Username" class="form__control-input" formControlName="email">
             </div>
             <div class="form__control">
-                <input type="text" name="password" placeholder="Password" class="form__control-input">
+                <input type="password" name="password" placeholder="Password" class="form__control-input" formControlName="password">
             </div>
             <a class="remember__link">Don't remember password?</a>
             <button class="btn btn-lg">LOG IN</button>
@@ -22,3 +22,4 @@
         <p>Internally Generated Revenue Monitoring System &copy; 2019</p>
     </footer>
 </div>
+

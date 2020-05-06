@@ -5,11 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { RevenueComponent } from './revenue.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UploadpaymentComponent } from './uploadPayment/uploadpayment.component';
+import { TicketComponent } from './ticket/ticket.component';
+
 
 const routes: Routes = [
     { path: '', component: RevenueComponent, children: [
       { path: 'dashboard', component: DashboardComponent },
-      {path: 'uploadpayment', component: UploadpaymentComponent}
+      {path: 'uploadpayment', component: UploadpaymentComponent},
+      {path: 'ticket', component: TicketComponent}
     ] }
 ]
 
@@ -21,5 +24,5 @@ const routes: Routes = [
     exports: [RouterModule],
 })
 export class RevenueRoutingModule {
-    static components = [RevenueComponent, DashboardComponent, UploadpaymentComponent];
+    static components = [RevenueComponent, DashboardComponent, UploadpaymentComponent, TicketComponent];
 }
