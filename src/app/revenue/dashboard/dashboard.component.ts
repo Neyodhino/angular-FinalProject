@@ -32,6 +32,7 @@ export class DashboardComponent implements OnInit {
         this.ticketId = result;
         console.log(this.ticketId);
         this.dataService.getPayment(this.ticketId).subscribe(doc=> {
+          console.log(doc);
             if(doc.exists){
               this.notification.success('Ticket is valid', 'Notification');
             }else {
