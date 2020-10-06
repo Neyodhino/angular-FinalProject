@@ -34,6 +34,6 @@ export class UploadpaymentComponent implements OnInit {
   uploadPayment(formValue){
     this.dataService.uploadPayment(formValue);
     this.router.navigate(['/revenue/ticket', this.uploadPaymentForm.value]);
-    this.notification.success('Payment details uploaded successfully', 'Notification')
+    this.notification.success('Payment details uploaded successfully', 'Notification');
   }
 }

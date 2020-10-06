@@ -3,8 +3,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {faArrowCircleUp, faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 import { VaidataDialogComponent } from '../vaidata-dialog/vaidata-dialog.component';
 
-import { DataService } from "../../core/services/data.service";
-import { ToastrService } from "ngx-toastr";
+import { DataService } from '../../core/services/data.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
     selector: "revenue-dashboard",
@@ -31,15 +31,17 @@ export class DashboardComponent implements OnInit {
       dialogRef.afterClosed().subscribe(result => {
         this.ticketId = result;
         console.log(this.ticketId);
-        this.dataService.getPayment(this.ticketId).subscribe(doc=> {
+        this.dataService.getPayment(this.ticketId).subscribe(doc => {
           console.log(doc);
-            if(doc.exists){
+          if (doc.exists) {
               this.notification.success('Ticket is valid', 'Notification');
-            }else {
+            } else {
               this.notification.error('Ticket not valid');
             }
-        })
+        });
       });
     }
   }
+
+
 

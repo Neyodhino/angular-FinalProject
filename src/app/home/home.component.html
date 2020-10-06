@@ -9,10 +9,10 @@
         <p class="paragraph secondary__style">Sign in to monitor revenue records</p>
         <form [formGroup]="loginForm" (ngSubmit) = 'onSubmit(loginForm.value)'>
             <div class="form__control">
-                <input type="email" placeholder="Username" class="form__control-input" formControlName="email">
+                <input type="email" placeholder="Username" class="form__control-input" formControlName="email" required>
             </div>
             <div class="form__control">
-                <input type="password" name="password" placeholder="Password" class="form__control-input" formControlName="password">
+                <input type="password" name="password" placeholder="Password" class="form__control-input" formControlName="password" required>
             </div>
             <a class="remember__link">Don't remember password?</a>
             <button class="btn btn-lg">LOG IN</button>
@@ -22,4 +22,5 @@
         <p>Internally Generated Revenue Monitoring System &copy; 2019</p>
     </footer>
 </div>
+
 

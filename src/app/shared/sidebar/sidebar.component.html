@@ -8,12 +8,12 @@
               <ul>
                 <li>
                   <fa-icon [icon]="chartIcon" style="color: #17148f"></fa-icon>
-                  <a routerLink = "/revenue/dashboard" routerLinkActive = "active">Dashboard</a>
+                  <a [routerLink] = "['dashboard']" routerLinkActive = "active">Dashboard</a>
                 </li>
 
                 <li>
                     <fa-icon [icon]="topupIcon" style="color: #dbc92a"></fa-icon>
-                    <a routerLink = "/revenue/uploadpayment" routerLinkActive = "active">Upload Payment</a>
+                    <a [routerLink] = "['/revenue/uploadpayment']" routerLinkActive = "active">Upload Payment</a>
                   </li>
               </ul>
           </nav>
